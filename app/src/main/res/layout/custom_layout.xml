@@ -53,6 +53,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="top"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="#E0E0E0"
                     android:text="song artist">
 
                 </TextView>
