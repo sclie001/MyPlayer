@@ -2,57 +2,16 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/rootView"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="16dp">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/song_title_textView"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="bottom"
-                android:textStyle="bold"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:text="song title">
-
-            </TextView>
-
-            <TextView
-                android:id="@+id/song_artist_textView"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="top"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                android:text="song artist">
-
-            </TextView>
-
-        </LinearLayout>
-
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="play">
-
-        </Button>
-
-    </LinearLayout>
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/recycler_view"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       tools:listitem="@layout/custom_layout"
+       android:padding="10dp">
+   </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>
