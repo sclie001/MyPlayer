@@ -1,6 +1,7 @@
 package com.example.myplayer;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.LinearLayout;
@@ -15,9 +16,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        LinearLayout rootView = findViewById(R.id.rootView);
+        /*RecyclerView recyclerView = findViewById(R.id.recycler_view);
         TextView title = findViewById(R.id.song_title_textView);
-        TextView artist = findViewById(R.id.song_artist_textView);
+        TextView artist = findViewById(R.id.song_artist_textView);*/
 
         ArrayList<Song> songs = new ArrayList<>();
 
