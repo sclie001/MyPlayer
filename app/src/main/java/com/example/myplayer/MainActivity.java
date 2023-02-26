@@ -1,12 +1,9 @@
 package com.example.myplayer;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,10 +12,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        /*TextView title = findViewById(R.id.song_title_textView);
-        TextView artist = findViewById(R.id.song_artist_textView);*/
+
+        //LinearLayoutManager will layout elements in a similar fashion to
+        //the way ListView would layout elements.
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
 
         ArrayList<Song> songs = new ArrayList<>();
@@ -28,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
                 R.raw.save_the_last_trance_for_me));
 
         CustomAdapter adapter = new CustomAdapter(songs);
-        
-        //set CustomAdapter as the adapter for the RecyclerView
-        recyclerView.setAdapter(adapter);
+
+        recyclerView.setAdapter(adapter);//set CustomAdapter as the adapter for the RecyclerView
+        recyclerView.setLayoutManager(layoutManager);
 
 
 
