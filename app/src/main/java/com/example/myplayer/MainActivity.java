@@ -26,8 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 R.raw.save_the_last_trance_for_me));
 
 
-        //TODO:Create RecycleView
-        //TODO:Create custom layout for RecycleView
+
         //TODO:Create custom adapter
         //TODO:Attach the adapter to the RecycleView
         //TODO: Attach LinearLayoutManager to RecycleView
