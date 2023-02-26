@@ -31,11 +31,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);//set CustomAdapter as the adapter for the RecyclerView
         recyclerView.setLayoutManager(layoutManager);
 
-
-
-        //TODO:Create custom adapter
-        //TODO:Attach the adapter to the RecycleView
-        //TODO: Attach LinearLayoutManager to RecycleView
+        //TODO: play song once card is clicked (customAdatper class?)
+        //TODO: update song list
 
 
 
