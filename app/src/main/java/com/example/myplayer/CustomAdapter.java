@@ -19,7 +19,6 @@ import java.util.List;
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder>{
 
     private List<Song> songList = new ArrayList<>();
-    private MediaPlayer mediaPlayer;
 
     /*Initialize the dataset for the adapter
     * @param list_songs contains the list of songs to populate
@@ -66,13 +65,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            //TODO:define click listener for ViewHolder's view
+
             image = itemView.findViewById(R.id.image);
             songTitle = itemView.findViewById(R.id.song_title_textView);
             songArtist = itemView.findViewById(R.id.song_artist_textView);
 
-            //TODO:define click listener for ViewHolder's view
-            //attach the click listener to the view
-            itemView.setOnClickListener(this);
         }
 
         /*Get the song title*/
