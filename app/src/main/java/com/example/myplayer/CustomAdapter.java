@@ -1,6 +1,9 @@
 package com.example.myplayer;
 
+<<<<<<< HEAD
 import android.media.MediaPlayer;
+=======
+>>>>>>> parent of 874ded0 (implement onClick in ViewHolder)
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,7 +58,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     }
 
     /*Provide a reference to the types of views used (custom ViewHolder)*/
-    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    class ViewHolder extends RecyclerView.ViewHolder {
 
         private final TextView songTitle;
         private final TextView songArtist;
@@ -86,6 +89,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         public ImageView getImage() {
             return image;
         }
+<<<<<<< HEAD
 
         @Override
         public void onClick(View view) {
@@ -106,5 +110,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
                 mediaPlayer = null;
             }
         }
+=======
+>>>>>>> parent of 874ded0 (implement onClick in ViewHolder)
     }
 }
