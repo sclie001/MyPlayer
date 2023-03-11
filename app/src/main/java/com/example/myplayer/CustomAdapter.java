@@ -15,6 +15,7 @@ import java.util.List;
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder>{
 
     private List<Song> songList = new ArrayList<>();
+    private OnItemClickListener listener;
 
     /*Initialize the dataset for the adapter
     * @param list_songs contains the list of songs to populate
@@ -51,6 +52,12 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     public int getItemCount() {
         return songList.size();
     }
+
+    //define listener interface
+    public interface OnItemClickListener{
+        void onItemClick(View viewItem, int position);
+    }
+
 
     /*Provide a reference to the types of views used (custom ViewHolder)*/
     class ViewHolder extends RecyclerView.ViewHolder {
