@@ -1,9 +1,5 @@
 package com.example.myplayer;
 
-<<<<<<< HEAD
-import android.media.MediaPlayer;
-=======
->>>>>>> parent of 874ded0 (implement onClick in ViewHolder)
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -87,28 +83,5 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         public ImageView getImage() {
             return image;
         }
-<<<<<<< HEAD
-
-        @Override
-        public void onClick(View view) {
-            //release media player if it currently exists
-            //because we are about to play a different sound file
-            releaseMediaPlayer();
-
-        }
-        private void releaseMediaPlayer(){
-            //if the player is not null, it may be currently playing a sound file
-            if(mediaPlayer != null){
-                //Regardless of the current state of the player, release its resources
-                //because we no longer need it
-                mediaPlayer.release();
-
-                //set the player back to null. By setting the player to null, it is easy
-                //to tell the player is not configured to play audio at the moment.
-                mediaPlayer = null;
-            }
-        }
-=======
->>>>>>> parent of 874ded0 (implement onClick in ViewHolder)
     }
 }
