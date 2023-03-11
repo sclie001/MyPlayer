@@ -1,5 +1,6 @@
 package com.example.myplayer;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -53,7 +54,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     }
 
     /*Provide a reference to the types of views used (custom ViewHolder)*/
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         private final TextView songTitle;
         private final TextView songArtist;
@@ -81,6 +82,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         /*Get the image*/
         public ImageView getImage() {
             return image;
+        }
+
+        @Override
+        public void onClick(View view) {
+
         }
     }
 }
