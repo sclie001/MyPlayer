@@ -1,6 +1,6 @@
 package com.example.myplayer;
 
-import android.content.Context;
+import android.media.MediaPlayer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +16,7 @@ import java.util.List;
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder>{
 
     private List<Song> songList = new ArrayList<>();
+    private MediaPlayer mediaPlayer;
 
     /*Initialize the dataset for the adapter
     * @param list_songs contains the list of songs to populate
@@ -67,7 +68,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             songArtist = itemView.findViewById(R.id.song_artist_textView);
 
             //TODO:define click listener for ViewHolder's view
-            //attach the click listener to the row view
+            //attach the click listener to the view
             itemView.setOnClickListener(this);
         }
 
@@ -88,7 +89,22 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
         @Override
         public void onClick(View view) {
+            //release media player if it currently exists
+            //because we are about to play a different sound file
+            releaseMediaPlayer();
 
+        }
+        private void releaseMediaPlayer(){
+            //if the player is not null, it may be currently playing a sound file
+            if(mediaPlayer != null){
+                //Regardless of the current state of the player, release its resources
+                //because we no longer need it
+                mediaPlayer.release();
+
+                //set the player back to null. By setting the player to null, it is easy
+                //to tell the player is not configured to play audio at the moment.
+                mediaPlayer = null;
+            }
         }
     }
 }
