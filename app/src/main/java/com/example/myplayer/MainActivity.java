@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -32,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(new CustomAdapter(songs, new CustomAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View viewItem, int position) {
-
+                String artist = songs.get(position).getArtist();
+                Toast.makeText(MainActivity.this, artist + "was clicked!",
+                        Toast.LENGTH_SHORT).show();
             }
         }));
         recyclerView.setLayoutManager(layoutManager);
