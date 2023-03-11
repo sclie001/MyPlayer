@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
+import android.view.View;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,9 +28,13 @@ public class MainActivity extends AppCompatActivity {
         songs.add(new Song("Save the last trance for me", "Paul Oakenfold",
                 R.raw.save_the_last_trance_for_me));
 
-        CustomAdapter adapter = new CustomAdapter(songs);
+        //set CustomAdapter as the adapter for the RecyclerView
+        recyclerView.setAdapter(new CustomAdapter(songs, new CustomAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View viewItem, int position) {
 
-        recyclerView.setAdapter(adapter);//set CustomAdapter as the adapter for the RecyclerView
+            }
+        }));
         recyclerView.setLayoutManager(layoutManager);
 
         //TODO: play song once card is clicked (customAdatper class?)
