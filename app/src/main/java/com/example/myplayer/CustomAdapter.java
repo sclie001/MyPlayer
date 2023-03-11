@@ -71,6 +71,20 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
             super(itemView);
             //TODO:define click listener for ViewHolder's view
 
+            //set up the click listener
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //triggers upwards to the adapter onClick
+                    if(listener != null){
+                        int position = getAdapterPosition();
+                        if(position != RecyclerView.NO_POSITION){
+                            listener.onItemClick(itemView, position);
+                        }
+                    }
+                }
+            });
+
             image = itemView.findViewById(R.id.image);
             songTitle = itemView.findViewById(R.id.song_title_textView);
             songArtist = itemView.findViewById(R.id.song_artist_textView);
