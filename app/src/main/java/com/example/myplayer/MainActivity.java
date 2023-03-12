@@ -36,11 +36,12 @@ public class MainActivity extends AppCompatActivity {
                 String artist = songs.get(position).getArtist();
                 Toast.makeText(MainActivity.this, artist + "was clicked!",
                         Toast.LENGTH_SHORT).show();
+
+                //TODO:direct user to play_activity once the view is pressed (multiple screens)
             }
         }));
         recyclerView.setLayoutManager(layoutManager);
-
-        //TODO: play song once card is clicked (customAdatper class?)
+        
         //TODO: update song list
 
 
