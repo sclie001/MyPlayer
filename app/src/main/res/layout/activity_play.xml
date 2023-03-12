@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/card_bkgr_color"
+    tools:context=".PlayActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/concert"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/music" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:background="@color/material_dynamic_neutral50">
+
+
+        <ImageButton
+            android:id="@+id/pause_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@color/material_dynamic_neutral50"
+            android:contentDescription="@string/pause"
+            app:srcCompat="@android:drawable/ic_media_pause">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/play_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@color/material_dynamic_neutral50"
+            android:contentDescription="@string/play"
+            app:srcCompat="@android:drawable/ic_media_play">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/stop_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:background="@color/material_dynamic_neutral50"
+            android:contentDescription="@string/stop"
+            app:srcCompat="@android:drawable/ic_delete">
+
+        </ImageButton>
+
+    </LinearLayout>
+</LinearLayout>
