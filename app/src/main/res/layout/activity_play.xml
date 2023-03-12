@@ -17,7 +17,7 @@
         android:layout_weight="1"
         android:contentDescription="@string/concert"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/music" />
+        app:srcCompat="@drawable/music2" />
 
 
     <LinearLayout
