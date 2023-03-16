@@ -63,6 +63,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         void onItemClick(View viewItem, int position);
     }
 
+    //Define a method that allows the parent activity to define the listener
+    public void setOnItemClickListener(OnItemClickListener listener){
+        this.listener = listener;
+    }
 
     /*Provide a reference to the types of views used (custom ViewHolder)*/
     class ViewHolder extends RecyclerView.ViewHolder {
