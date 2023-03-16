@@ -3,6 +3,8 @@ package com.example.myplayer;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -29,18 +31,26 @@ public class MainActivity extends AppCompatActivity {
         songs.add(new Song("Save the last trance for me", "Paul Oakenfold",
                 R.raw.save_the_last_trance_for_me));
 
-        //set CustomAdapter as the adapter for the RecyclerView
+        /*//set CustomAdapter as the adapter for the RecyclerView
         recyclerView.setAdapter(new CustomAdapter(songs, new CustomAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View viewItem, int position) {
                 String artist = songs.get(position).getArtist();
+                String title = songs.get(position).getTitle();
+                int song = songs.get(position).getAudioResourceId();
                 Toast.makeText(MainActivity.this, artist + "was clicked!",
                         Toast.LENGTH_SHORT).show();
 
                 //TODO:direct user to play_activity once the view is pressed (multiple screens)
+                Intent intent = new Intent(MainActivity.this, PlayActivity.class);
+                startActivity(intent);
             }
-        }));
+        }));*/
+        recyclerView.setAdapter(new CustomAdapter(songs));
         recyclerView.setLayoutManager(layoutManager);
+
+
+
         
         //TODO: update song list
 
