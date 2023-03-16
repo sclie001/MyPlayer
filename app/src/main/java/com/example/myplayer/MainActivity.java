@@ -46,8 +46,21 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         }));*/
-        recyclerView.setAdapter(new CustomAdapter(songs));
+        CustomAdapter adapter = new CustomAdapter(songs);
+        recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
+
+        adapter.setOnItemClickListener(new CustomAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View viewItem, int position) {
+                String artist = songs.get(position).getArtist();
+                String title = songs.get(position).getTitle();
+                int song = songs.get(position).getAudioResourceId();
+
+                Toast.makeText(MainActivity.this, artist + "was clicked!",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
 
