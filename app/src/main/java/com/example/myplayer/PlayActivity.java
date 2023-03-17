@@ -11,6 +11,8 @@ public class PlayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
 
+        //TODO: accept data sent from recycleView
+
         //TODO:handle button clicks for play, pause, and stop buttons
 
         //TODO:possibly add different button states: button pressed and button normal
