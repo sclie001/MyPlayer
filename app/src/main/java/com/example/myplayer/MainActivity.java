@@ -31,21 +31,6 @@ public class MainActivity extends AppCompatActivity {
         songs.add(new Song("Save the last trance for me", "Paul Oakenfold",
                 R.raw.save_the_last_trance_for_me));
 
-        /*//set CustomAdapter as the adapter for the RecyclerView
-        recyclerView.setAdapter(new CustomAdapter(songs, new CustomAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View viewItem, int position) {
-                String artist = songs.get(position).getArtist();
-                String title = songs.get(position).getTitle();
-                int song = songs.get(position).getAudioResourceId();
-                Toast.makeText(MainActivity.this, artist + "was clicked!",
-                        Toast.LENGTH_SHORT).show();
-
-                //TODO:direct user to play_activity once the view is pressed (multiple screens)
-                Intent intent = new Intent(MainActivity.this, PlayActivity.class);
-                startActivity(intent);
-            }
-        }));*/
         CustomAdapter adapter = new CustomAdapter(songs);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);

@@ -17,14 +17,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     private List<Song> songList;
     private OnItemClickListener listener;
 
-    /*Initialize the dataset for the adapter
-    * @param list_songs contains the list of songs to populate
-    * views to be used by RecyclerView*/
-    /*public CustomAdapter(List<Song> list_songs, OnItemClickListener listener){
-        this.songList = list_songs;
-        this.listener = listener;
-    }*/
-
     public CustomAdapter(List<Song> list_songs){
         this.songList = list_songs;
     }
