@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
                 Toast.makeText(MainActivity.this, artist + "was clicked!",
                         Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(MainActivity.this, PlayActivity.class);
+                startActivity(intent);
             }
         });
 
