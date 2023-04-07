@@ -24,6 +24,7 @@ public class PlayActivity extends AppCompatActivity {
         String artist_str = intent.getStringExtra("song-artist");
         songArtist.setText(artist_str);
 
+        //layout_edits is branched from here
         //TODO: accept song file sent 
 
         //TODO:handle button clicks for play, pause, and stop buttons
