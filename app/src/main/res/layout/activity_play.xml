@@ -17,7 +17,7 @@
         android:layout_marginBottom="5dp"
         android:layout_centerInParent="true"
         android:layout_below="@+id/imageView"
-        android:text="Song Title"
+        android:text="@string/song_title_playAct"
         android:textSize="24sp"
         android:textColor="@color/white"/>
 
@@ -29,7 +29,7 @@
         android:layout_marginBottom="5dp"
         android:layout_centerInParent="true"
         android:layout_below="@+id/song_title_textView"
-        android:text="artist name"
+        android:text="@string/song_artist_playAct"
         android:textSize="18sp"
         android:textColor="@color/white"/>
 
