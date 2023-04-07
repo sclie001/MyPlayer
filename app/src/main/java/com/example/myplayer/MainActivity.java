@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        //TODO: pass recycleView data to play activity
+        //TODO: pass the song file from recycleView to play activity
 
         //TODO: add image to Song in order to test that a click changes the image on play activity
         

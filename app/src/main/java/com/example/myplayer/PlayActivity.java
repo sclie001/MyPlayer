@@ -13,7 +13,6 @@ public class PlayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
 
-        //TODO: accept data sent from recycleView
         TextView songTitle = findViewById(R.id.song_title_playAct_textView);
         TextView songArtist = findViewById(R.id.song_artist_playAct_textView);
 
@@ -24,6 +23,8 @@ public class PlayActivity extends AppCompatActivity {
 
         String artist_str = intent.getStringExtra("song-artist");
         songArtist.setText(artist_str);
+
+        //TODO: accept song file sent 
 
         //TODO:handle button clicks for play, pause, and stop buttons
 
