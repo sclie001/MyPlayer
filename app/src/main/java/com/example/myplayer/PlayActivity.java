@@ -2,7 +2,9 @@ package com.example.myplayer;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class PlayActivity extends AppCompatActivity {
 
@@ -12,6 +14,16 @@ public class PlayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_play);
 
         //TODO: accept data sent from recycleView
+        TextView songTitle = findViewById(R.id.song_title_textView);
+        TextView songArtist = findViewById(R.id.artist_name_textView);
+
+        Intent intent = getIntent();//create Intent object
+
+        String song_title_str = intent.getStringExtra("song-title");
+        songTitle.setText(song_title_str);
+
+        String artist_str = intent.getStringExtra("song-artist");
+        songArtist.setText(artist_str);
 
         //TODO:handle button clicks for play, pause, and stop buttons
 
