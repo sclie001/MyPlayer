@@ -57,17 +57,6 @@
                 </TextView>
             </LinearLayout>
 
-
-            <Button
-                android:id="@+id/play_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="play"
-                android:layout_gravity="center_vertical"
-                android:layout_marginEnd="14dp">
-
-            </Button>
-
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
