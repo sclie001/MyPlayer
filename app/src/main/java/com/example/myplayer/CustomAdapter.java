@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder>{
@@ -85,7 +84,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
                 }
             });
 
-            image = itemView.findViewById(R.id.image);
+            image = itemView.findViewById(R.id.image_cardView);
             songTitle = itemView.findViewById(R.id.song_title_textView);
             songArtist = itemView.findViewById(R.id.song_artist_textView);
 

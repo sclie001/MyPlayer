@@ -6,4 +6,7 @@
     <string name="stop">stop song</string>
     <string name="song_title_playAct">song title</string>
     <string name="song_artist_playAct">song artist</string>
+    <string name="cardView_album_image">album image</string>
+    <string name="cardView_song_title">song title</string>
+    <string name="cardView_song_artist">artist</string>
 </resources>

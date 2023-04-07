@@ -14,8 +14,8 @@ public class PlayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_play);
 
         //TODO: accept data sent from recycleView
-        TextView songTitle = findViewById(R.id.song_title_textView);
-        TextView songArtist = findViewById(R.id.artist_name_textView);
+        TextView songTitle = findViewById(R.id.song_title_playAct_textView);
+        TextView songArtist = findViewById(R.id.song_artist_playAct_textView);
 
         Intent intent = getIntent();//create Intent object
 
