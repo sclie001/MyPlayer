@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(View viewItem, int position) {
                 String artist = songs.get(position).getArtist();
                 String title = songs.get(position).getTitle();
-                int song = songs.get(position).getAudioResourceId();
+                int audioResourceId = songs.get(position).getAudioResourceId();
+
 
                 Toast.makeText(MainActivity.this, artist + "was clicked!",
                         Toast.LENGTH_SHORT).show();
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, PlayActivity.class);
                 intent.putExtra("song-title", title);
                 intent.putExtra("song-artist", artist);
+                //send audioResourceId to playActivity
                 startActivity(intent);
             }
         });
