@@ -3,11 +3,14 @@ package com.example.myplayer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 public class PlayActivity extends AppCompatActivity {
-
+    private MediaPlayer mMediaPlayer;
+    private String TAG = "PlayActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +28,14 @@ public class PlayActivity extends AppCompatActivity {
         songArtist.setText(artist_str);
 
         //layout_edits is branched from here
-        //TODO: accept song file sent 
+
+        //TODO: accept song file sent
+        Bundle bundle = getIntent().getExtras();
+        int audioResId = bundle.getInt("audio resource id");
+        Log.d(TAG, String.valueOf(audioResId));
+
+
+
 
         //TODO:handle button clicks for play, pause, and stop buttons
 

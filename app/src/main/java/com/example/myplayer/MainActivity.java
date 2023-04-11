@@ -6,12 +6,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    private String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("song-title", title);
                 intent.putExtra("song-artist", artist);
                 //send audioResourceId to playActivity
+                intent.putExtra("audio resource id", audioResourceId);
+                Log.d(TAG, String.valueOf(audioResourceId));
                 startActivity(intent);
             }
         });
