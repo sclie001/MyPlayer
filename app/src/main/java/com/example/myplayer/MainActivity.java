@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Song> songs = new ArrayList<>();
 
         songs.add(new Song("Haunted", "Paul Van Dyk", R.raw.haunted));
-        songs.add(new Song("Save the last trance for me", "Paul Oakenfold",
-                R.raw.save_the_last_trance_for_me));
+        songs.add(new Song("Liquid Love", "Above & Beyond",
+                R.raw.liquid_love));
 
         CustomAdapter adapter = new CustomAdapter(songs);
         recyclerView.setAdapter(adapter);
@@ -51,9 +51,11 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, PlayActivity.class);
                 intent.putExtra("song-title", title);
                 intent.putExtra("song-artist", artist);
+
                 //send audioResourceId to playActivity
                 intent.putExtra("audio resource id", audioResourceId);
-                Log.d(TAG, String.valueOf(audioResourceId));
+
+                Log.d(TAG, audioResourceId + "\t" + title);
                 startActivity(intent);
             }
         });
