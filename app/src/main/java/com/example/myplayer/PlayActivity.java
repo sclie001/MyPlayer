@@ -54,6 +54,14 @@ public class PlayActivity extends AppCompatActivity {
             }
         });
 
+        stop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mMediaPlayer.stop();
+                mMediaPlayer.release();
+            }
+        });
+
         //TODO:possibly add different button states: button pressed and button normal
         //https://developer.android.com/reference/android/widget/ImageButton
     }
