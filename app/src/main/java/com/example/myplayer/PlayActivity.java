@@ -48,6 +48,9 @@ public class PlayActivity extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(mMediaPlayer == null){
+                    mMediaPlayer = MediaPlayer.create(PlayActivity.this, audioResId);
+                }
                 mMediaPlayer.start();
                 Toast.makeText(getApplicationContext(), "audio playing",
                         Toast.LENGTH_SHORT).show();
@@ -59,6 +62,7 @@ public class PlayActivity extends AppCompatActivity {
             public void onClick(View view) {
                 mMediaPlayer.stop();
                 mMediaPlayer.release();
+                mMediaPlayer = null;
             }
         });
 
