@@ -69,6 +69,9 @@ public class PlayActivity extends AppCompatActivity {
                 mMediaPlayer.stop();
                 mMediaPlayer.release();
                 mMediaPlayer = null;
+
+                disableButton(pause);
+                disableButton(stop);
             }
         });
 
