@@ -57,6 +57,9 @@ public class PlayActivity extends AppCompatActivity {
                 mMediaPlayer.start();
                 Toast.makeText(getApplicationContext(), "audio playing",
                         Toast.LENGTH_SHORT).show();
+
+                enableButton(pause);
+                enableButton(stop);
             }
         });
 
@@ -83,5 +86,10 @@ public class PlayActivity extends AppCompatActivity {
     private void disableButton(ImageButton button){
         button.setEnabled(false);
         button.setImageAlpha(45);
+    }
+
+    private void enableButton(ImageButton button){
+        button.setEnabled(true);
+        button.setImageAlpha(255);
     }
 }
