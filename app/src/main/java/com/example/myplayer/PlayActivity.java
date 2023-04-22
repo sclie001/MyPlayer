@@ -26,8 +26,8 @@ public class PlayActivity extends AppCompatActivity {
         ImageButton play = findViewById(R.id.play_button);
         ImageButton stop = findViewById(R.id.stop_button);
 
-        pause.setEnabled(false);
-
+        disableButton(pause);
+        disableButton(stop);
 
         Intent intent = getIntent();//create Intent object
 
@@ -78,5 +78,10 @@ public class PlayActivity extends AppCompatActivity {
 
         //TODO:possibly add different button states: button pressed and button normal
         //https://developer.android.com/reference/android/widget/ImageButton
+    }
+
+    private void disableButton(ImageButton button){
+        button.setEnabled(false);
+        button.setImageAlpha(45);
     }
 }
