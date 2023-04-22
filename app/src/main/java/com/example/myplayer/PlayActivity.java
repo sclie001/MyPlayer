@@ -37,9 +37,9 @@ public class PlayActivity extends AppCompatActivity {
         String artist_str = intent.getStringExtra("song-artist");
         songArtist.setText(artist_str);
 
-        //layout_edits is branched from here
+        //layout_edits is branched from play_music
 
-        //TODO: accept song file sent
+        //accept song file sent
         Bundle bundle = getIntent().getExtras();
         int audioResId = bundle.getInt("audio resource id");
         Log.d(TAG, String.valueOf(audioResId));
@@ -47,7 +47,7 @@ public class PlayActivity extends AppCompatActivity {
         //add the music file to the newly created media player
         mMediaPlayer = MediaPlayer.create(PlayActivity.this, audioResId);
 
-        //TODO:handle button clicks for play, pause, and stop buttons
+        //handle button clicks for play, pause, and stop buttons
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -62,7 +62,6 @@ public class PlayActivity extends AppCompatActivity {
                 enableButton(stop);
             }
         });
-
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,16 +83,22 @@ public class PlayActivity extends AppCompatActivity {
                 disableButton(pause);
             }
         });
-
-        //TODO:possibly add different button states: button pressed and button normal
         //https://developer.android.com/reference/android/widget/ImageButton
     }
 
+    /**
+     * Disable button
+     * @param button button to disable
+     */
     private void disableButton(ImageButton button){
         button.setEnabled(false);
         button.setImageAlpha(45);
     }
 
+    /**
+     * Enable button
+     * @param button button to enable
+     */
     private void enableButton(ImageButton button){
         button.setEnabled(true);
         button.setImageAlpha(255);
