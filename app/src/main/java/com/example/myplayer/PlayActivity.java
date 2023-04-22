@@ -83,7 +83,6 @@ public class PlayActivity extends AppCompatActivity {
                 disableButton(pause);
             }
         });
-        //https://developer.android.com/reference/android/widget/ImageButton
     }
 
     /**
