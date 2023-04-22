@@ -79,6 +79,9 @@ public class PlayActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mMediaPlayer.pause();
+
+                disableButton(stop);
+                disableButton(pause);
             }
         });
 
