@@ -26,6 +26,9 @@ public class PlayActivity extends AppCompatActivity {
         ImageButton play = findViewById(R.id.play_button);
         ImageButton stop = findViewById(R.id.stop_button);
 
+        pause.setEnabled(false);
+
+
         Intent intent = getIntent();//create Intent object
 
         String song_title_str = intent.getStringExtra("song-title");
