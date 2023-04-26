@@ -46,4 +46,7 @@ public class Song{
     public int getAudioResourceId() {
         return audioResourceId;
     }
+
+    //TODO: add boolean method to check if the song has a image associated with it
+    //TODO: add a method to get the image resource id
 }
