@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         songs.add(new Song("Haunted", "Paul Van Dyk", R.raw.haunted));
         songs.add(new Song("Liquid Love", "Above & Beyond",
-                R.raw.liquid_love));
+                R.raw.liquid_love, R.drawable.liquid_love));
 
         //TODO: add an image to a song
 
