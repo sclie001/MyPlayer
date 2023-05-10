@@ -47,6 +47,17 @@ public class Song{
         return audioResourceId;
     }
 
-    //TODO: add boolean method to check if the song has a image associated with it
+    /**
+     * Determine if song has an image associated with it
+     * @return false if imageResourceId -1, otherwise return true
+     */
+    public boolean hasImage(){
+        if(imageResourceId != -1){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     //TODO: add a method to get the image resource id
 }
