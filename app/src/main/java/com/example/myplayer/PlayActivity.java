@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class PlayActivity extends AppCompatActivity {
 
         TextView songTitle = findViewById(R.id.song_title_playAct_textView);
         TextView songArtist = findViewById(R.id.song_artist_playAct_textView);
+        ImageView image = findViewById(R.id.imageView_playAct);
 
         ImageButton pause = findViewById(R.id.pause_button);
         ImageButton play = findViewById(R.id.play_button);
@@ -39,10 +41,18 @@ public class PlayActivity extends AppCompatActivity {
 
         //layout_edits is branched from play_music
 
+
         //accept song file sent
         Bundle bundle = getIntent().getExtras();
         int audioResId = bundle.getInt("audio resource id");
         Log.d(TAG, String.valueOf(audioResId));
+
+        //accept the image sent
+        int imageResourceId = bundle.getInt("image");
+        image.setImageResource(imageResourceId);
+
+
+
 
         //add the music file to the newly created media player
         mMediaPlayer = MediaPlayer.create(PlayActivity.this, audioResId);
