@@ -45,11 +45,6 @@ public class MainActivity extends AppCompatActivity {
                 int audioResourceId = songs.get(position).getAudioResourceId();
                 boolean hasImage = songs.get(position).hasImage();
 
-                /*TODO: create condition to check whether the song has an image
-                   (boolean method from song returns -1 if there is no image attached to the song)
-                */
-                //TODO: if the song has an image, get the image resource id
-
 
                 Toast.makeText(MainActivity.this, artist + "was clicked!",
                         Toast.LENGTH_SHORT).show();
@@ -57,11 +52,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, PlayActivity.class);
                 intent.putExtra("song-title", title);
                 intent.putExtra("song-artist", artist);
+                //if there is an image attached to this song, send it
+                if(hasImage){
+                    int imageResourceId = songs.get(position).getImageResourceId();
+                    intent.putExtra("image", imageResourceId);
+                }
 
                 //send audioResourceId to playActivity
                 intent.putExtra("audio resource id", audioResourceId);
-
-                //TODO: putExtra the image resource id if there is one
 
                 Log.d(TAG, audioResourceId + "\t" + title);
                 startActivity(intent);
