@@ -60,4 +60,12 @@ public class Song{
         }
     }
     //TODO: add a method to get the image resource id
+
+    /**
+     * Get the resource id of the image for the song
+     * @return imageResourceId
+     */
+    public int getImageResourceId() {
+        return imageResourceId;
+    }
 }
