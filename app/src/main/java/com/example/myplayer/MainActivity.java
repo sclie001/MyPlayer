@@ -33,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
         songs.add(new Song("Liquid Love", "Above & Beyond",
                 R.raw.liquid_love, R.drawable.liquid_love));
 
-        //TODO: add an image to a song
-
         CustomAdapter adapter = new CustomAdapter(songs);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
@@ -45,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 String artist = songs.get(position).getArtist();
                 String title = songs.get(position).getTitle();
                 int audioResourceId = songs.get(position).getAudioResourceId();
+                boolean hasImage = songs.get(position).hasImage();
 
                 /*TODO: create condition to check whether the song has an image
                    (boolean method from song returns -1 if there is no image attached to the song)
