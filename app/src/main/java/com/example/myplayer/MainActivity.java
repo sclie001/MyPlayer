@@ -65,8 +65,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-        //TODO: add image to Song in order to test that a click changes the image on play activity
         
         //TODO: update song list
 

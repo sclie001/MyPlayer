@@ -39,9 +39,6 @@ public class PlayActivity extends AppCompatActivity {
         String artist_str = intent.getStringExtra("song-artist");
         songArtist.setText(artist_str);
 
-        //layout_edits is branched from play_music
-
-
         //accept song file sent
         Bundle bundle = getIntent().getExtras();
         int audioResId = bundle.getInt("audio resource id");
