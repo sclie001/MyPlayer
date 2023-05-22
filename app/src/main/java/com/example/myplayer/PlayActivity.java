@@ -64,7 +64,7 @@ public class PlayActivity extends AppCompatActivity {
                 mMediaPlayer.start();
                 Toast.makeText(getApplicationContext(), "audio playing",
                         Toast.LENGTH_SHORT).show();
-
+                disableButton(play);
                 enableButton(pause);
                 enableButton(stop);
             }
@@ -78,6 +78,7 @@ public class PlayActivity extends AppCompatActivity {
 
                 disableButton(pause);
                 disableButton(stop);
+                enableButton(play);
             }
         });
 
@@ -88,6 +89,7 @@ public class PlayActivity extends AppCompatActivity {
 
                 disableButton(stop);
                 disableButton(pause);
+                enableButton(play);
             }
         });
     }
