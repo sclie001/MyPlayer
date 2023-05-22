@@ -79,6 +79,9 @@ public class PlayActivity extends AppCompatActivity {
                 disableButton(pause);
                 disableButton(stop);
                 enableButton(play);
+
+                Intent intent = new Intent(PlayActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
