@@ -44,12 +44,11 @@ public class PlayActivity extends AppCompatActivity {
         int audioResId = bundle.getInt("audio resource id");
         Log.d(TAG, String.valueOf(audioResId));
 
-        //accept the image sent
-        int imageResourceId = bundle.getInt("image");
-        image.setImageResource(imageResourceId);
-
-
-
+        //accept only the image sent
+        int imageResourceId = bundle.getInt("image", 0);
+        if(imageResourceId > 0){
+            image.setImageResource(imageResourceId);
+        }
 
         //add the music file to the newly created media player
         mMediaPlayer = MediaPlayer.create(PlayActivity.this, audioResId);
